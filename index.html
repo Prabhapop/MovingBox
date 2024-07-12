@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        background: #99b898;
+        border-radius: 10px;
+        border: 2px solid slategray;
+        position: relativs;
+      }
+      #inside {
+        height: 50px;
+        width: 50px;
+        background: #feceab;
+        border: 2px solid #ed8135;
+        border-radius: 10px;
+        position: absolute;
+      }
+      #right {
+        height: 50px;
+        width: -50px;
+        background: #d35c7c;
+        border: 2px solid #e5547a;
+        border-radius: 10px;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inside"></div>
+      <div id="right"></div>
+    </div>
+    <p><button onclick="myMove()">Click</button></p>
+    <script>
+      function myMove() {
+        let pos = 0;
+        const elem = document.getElementById("inside");
+        const id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          }
+          pos++;
+          elem.style.top = pos + "px";
+          elem.style.left = pos + "px";
+        }
+      }
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        background: #99b898;
+        border-radius: 10px;
+        border: 2px solid slategray;
+        position: relative;
+      }
+      #inside {
+        height: 50px;
+        width: 50px;
+        background: #feceab;
+        border: 2px solid #ed8135;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #right {
+        height: 50px;
+        width: 50px;
+        background: #d35c7c;
+        border: 2px solid #e5547a;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inside"></div>
+      <div id="right"></div>
+    </div>
+    <p><button onclick="myMove()">Click</button></p>
+    <script>
+      function myMove() {
+        let pos = 0;
+        const insideElem = document.getElementById("inside");
+        const rightElem = document.getElementById("right");
+        const id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          }
+          pos++;
+          insideElem.style.top = pos + "px";
+          insideElem.style.left = pos + "px";
+          rightElem.style.top =  pos + "px";
+          rightElem.style.right = pos + "px";
+        }
+      }
+    </script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 400px;
+        background: #99b898;
+        border-radius: 10px;
+        border: 2px solid slategray;
+        position: relative;
+      }
+      #inside {
+        height: 50px;
+        width: 50px;
+        background: #feceab;
+        border: 2px solid #ed8135;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #right {
+        height: 20px;
+        width: 20px;
+        background: #d35c7c;
+        border: 2px solid #e5547a;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inside"></div>
+      <div id="right"></div>
+    </div>
+    <p><button onclick="myMove()">Click</button></p>
+    <script>
+      function myMove() {
+        let pos = 0;
+        const insideElem = document.getElementById("inside");
+        const rightElem = document.getElementById("right");
+        const id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          }
+          pos++;
+          insideElem.style.top = pos + "px";
+          insideElem.style.left = pos + "px";
+          rightElem.style.top = 350 - pos + "px";
+          rightElem.style.right = pos + "px";
+        }
+      }
+    </script>
+  </body>
+</html> -->
